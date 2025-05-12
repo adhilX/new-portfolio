@@ -144,7 +144,7 @@ export default function Portfolio() {
                 <GitHub className="w-6 h-6" />
               </Link>
               <Link
-                href="https://linkedin.com/in/adhil-p-a6a836311/https://linkedin.com"
+                href="https://linkedin.com/in/adhil-p-a6a836311"
                 target="_blank"
                 className="p-3 bg-gray-800 rounded-full hover:bg-purple-700 transition-colors"
               >

@@ -28,17 +28,37 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", subject: "", message: "" })
+      const response = await fetch('https://api.web3forms.com/submit',{
+        method :"POST",
+        headers:{
+            "Content-Type": "application/json",
+        },
+       body: JSON.stringify({
+        access_key: "5a54c4c1-ad65-4155-a5dc-3689a15bc456", // Replace with your Web3Forms key
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+      })
+        if (response.ok) {
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      setTimeout(() => setIsSubmitted(false), 5000)
+       } else {
+      const errorData = await response.json()
+      console.error("Submission error:", errorData)
+      alert("Something went wrong. Please try again.")
+    }
 
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-    }, 5000)
+    } catch (error) {
+      console.error(error);
+      
+    }finally{
+        setIsSubmitting(false)
+    }
   }
 
   return (

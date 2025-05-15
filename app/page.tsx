@@ -281,12 +281,12 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="mt-12 text-center"
           >
-            <Link
+            {/* <Link
               href="#"
               className="px-8 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
             >
               View All Projects
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
       </motion.section>

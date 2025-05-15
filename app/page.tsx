@@ -53,24 +53,24 @@ export default function Portfolio() {
       tags: ["EJS", "Node.js", "MongoDB", "Express"],
       link: "https://shuttercart.adhi.live",
     },
-    {
-      id: 2,
-      title: "Real-time Chat Application",
-      description:
-        "A real-time messaging application with features like user presence, message status, and file sharing.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "Socket.io", "Express", "MongoDB", "JWT"],
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Task Management System",
-      description:
-        "A collaborative task management system with real-time updates, task assignment, and progress tracking.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-      link: "#",
-    },
+    // {
+    //   id: 2,
+    //   title: "Real-time Chat Application",
+    //   description:
+    //     "A real-time messaging application with features like user presence, message status, and file sharing.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   tags: ["React", "Socket.io", "Express", "MongoDB", "JWT"],
+    //   link: "#",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Task Management System",
+    //   description:
+    //     "A collaborative task management system with real-time updates, task assignment, and progress tracking.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    //   link: "#",
+    // },
   ];
 
   const skills = [
